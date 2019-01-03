@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建流水</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/common.js"></script>
+    <script src="../../js/zujian.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <!--//用来接收页面之间的传值-->
+    <script src="../../js/jquery.params.js"></script>
+    <link rel="stylesheet" href="../../cj/layui/css/layui.css" media="all">
+    <style>
+        .lsglcreate{
+            width:100%;
+            /*height: 100%;*/
+            min-height:700px;
+            background: #ffffff;
+            padding-top: 30px !important;
+        }
+        input{
+            width: 280px !important;
+            border-radius: 6px !important;
+            height: 36px !important;
+            line-height: 36px !important;
+        }
+        textarea{
+            width:360px !important;
+        }
+
+    </style>
+</head>
+<body>
+<div class="lsglcreate">
+    <form class="layui-form" onsubmit="return false" action="#" method="post" name="formname" lay-filter="formname">
+        <div class="layui-form-item">
+            <label class="layui-form-label">流水名称</label>
+            <div class="layui-input-block">
+                <input id="username" type="text" name="lsname" required  lay-verify="required" placeholder="请输入流水名称" autocomplete="off" class="layui-input" >
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">流水日期</label>
+            <div class="layui-input-inline">
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="test30" placeholder="yyyy-MM-dd">
+                </div>
+            </div>
+            <!--<div class="layui-form-mid layui-word-aux">辅助文字</div>-->
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">关联姓名</label>
+            <div class="layui-input-block">
+                <input id="glname" type="text" name="glnamea" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">支出或收入</label>
+            <div class="layui-input-block">
+                <input type="radio" name="lstype" value="1" title="支出">
+                <input type="radio" name="lstype" value="2" title="收入" checked>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">流水金额</label>
+            <div class="layui-input-block">
+                <input type="text" id="telphone" name="lsmoney"   lay-verify="required" placeholder="请输入流水金额" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">备注</label>
+            <div class="layui-input-block">
+                <textarea name="bz" placeholder="请输入内容" class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo" >立即提交</button>
+                <button class="layui-btn layui-btn-primary" id="qx">取消</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+<script src="../../cj/layui/layui.js"></script>
+<script>
+    var couna='';
+    var id='';
+    var lsname='';
+    var lstime='';
+    var glnamea='';
+    var lstype='';
+    var lsmoney='';
+    var bz='';
+    $(function(){
+        getData1();
+    });
+
+    function getData1(){
+        console.log('wsaSa')
+        couna = $.query.get("couna");
+        if (couna===1){
+            console.log(couna)
+            //这是添加
+        }
+        if(couna===2){
+            id = $.query.get("id");
+            lsname = $.query.get("lsname");
+            lstime= $.query.get("lstime");
+            glnamea= $.query.get("glnamea");
+            lstype= $.query.get("lstype");
+            lsmoney=$.query.get("lsmoney");
+            bz= $.query.get("bz");
+            //这是编辑回显
+            form.val("formname", {
+                "lsname": lsname
+                ,"lstime": lstime
+                ,"glnamea":glnamea
+                ,"lstype":lstype
+                ,"lsmoney":lsmoney
+                ,"bz":bz
+            })
+        }
+    }
+    //Demo
+    layui.use('laydate', function() {
+        var dtes='';
+        var laydate = layui.laydate;
+        //执行一个laydate实例
+        //自定义颜色
+        laydate.render({
+            elem: '#test30'
+            ,theme: '#3592e2'
+            ,ready: function(date){
+                console.log(date);//得到初始的日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+            }
+            ,done: function(value, date, endDate){
+                lstime=value;
+                console.log(value); //得到日期生成的值，如：2017-08-18
+                console.log(date); //得到日期时间对象：{year: 2017, month: 8, date: 18, hours: 0, minutes: 0, seconds: 0}
+                console.log(endDate); //得结束的日期时间对象，开启范围选择（range: true）才会返回。对象成员同上。
+            }
+        });
+    })
+    layui.use('form', function(){
+        var form = layui.form;
+        $(document).on('click','#qx',function(){
+            window.location.href='lslist.html'
+        });
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            var dataNumber=new Object();
+            if(couna===2){
+                dataNumber.id=id;
+            }
+            dataNumber.lsname=data.field.lsname;
+            dataNumber.lstime=lstime;
+            dataNumber.glnamea=data.field.glnamea;
+            dataNumber.lstype=data.field.lstype;
+            dataNumber.lsmoney=data.field.lsmoney;
+            dataNumber.bz=data.field.bz;
+            dataNumber.counts=couna;
+            poster('post','json','/includs/finanicalmanagement/lscreate',true,dataNumber,function (data) {
+                        console.log(data)
+                        var title=data.msg;
+                        if(data.code===200){
+                            cs("300px","50px",title,true,false)
+                            setTimeout(function () {
+                                close();
+                            },2000)
+                            layui.form.render('select', 'test2');
+                            setTimeout(function () {
+                                window.location.href='lslist.html'
+                            },2000)
+                        }
+                        else if(data.code===300){
+                            cs("300px","50px",title,true,false)
+                            setTimeout(function () {
+                                close();
+                            },2000)
+                            setTimeout(function () {
+                                window.location.href='lslist.html'
+                            },2000)
+                        }
+                        else if(data.code===500){
+                            cs("300px","50px",title,true,false)
+                            setTimeout(function () {
+                                close();
+                            },2000)
+                            setTimeout(function () {
+                                // window.location.href='../login.html'
+                            },2000)
+                        }
+                    }
+                )
+
+
+
+
+        });
+
+    });
+</script>
+</body>
+
+</html>

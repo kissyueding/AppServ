@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%;height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/common.js"></script>
+    <script src="../js/zujian.js"></script>
+    <script>
+
+        function login() {
+            var username=myform.username.value;
+            var password=myform.password.value;
+            dataNumber=new Object();
+            dataNumber.username=username;
+            dataNumber.password=password;
+            dataNumber.usernames=username;
+            // dataNumber.roletype=1;
+            console.log(dataNumber)
+            poster('post','json','includs/login/logoroletype',true,dataNumber,function (data) {
+                console.log(data)
+                if(data.code===200){
+                    dataNumber.roletype=data.roletype.roletype;
+                    poster('post','json','includs/login/validatelogon',true,dataNumber,function (data) {
+                        // console.log(data)
+                        var title=data.msg;
+                        if(data.code===200){
+                            cs("300px","50px",title,true,false)
+                            setTimeout(function () {
+                                close();
+                            },2000)
+                            setTimeout(function () {
+                                window.location.href='index.html';
+                            },2000)
+
+                        }else{
+                            cs("300px","50px",title,true,false)
+                            setTimeout(function () {
+                                close();
+                            },1000)
+                        }
+                    })
+                }
+                else{
+                    var title='账号不存在';
+                    cs("300px","50px",title,true,false)
+                    setTimeout(function () {
+                        close();
+                    },1000)
+                }
+
+            })
+        }
+    </script>
+    <!--<script type="text/javascript">-->
+        <!--function login() {-->
+            <!--$.ajax({-->
+                <!--//几个参数需要注意一下-->
+                <!--type: "POST",//方法类型-->
+                <!--dataType: "json",//预期服务器返回的数据类型-->
+                <!--url: "http://localhost:8080/phpdemo/zxweb/includs/common.inc",//url-->
+                <!--data: {},-->
+                <!--success: function (result) {-->
+                    <!--console.log(result);//打印服务端返回的数据(调试用)-->
+                    <!--//     if (result.resultCode == 200) {-->
+                    <!--//         alert("SUCCESS");-->
+                    <!--//     }-->
+                    <!--//     ;-->
+                    <!--// },-->
+                    <!--// error : function() {-->
+                    <!--//     alert("异常！");-->
+                    <!--// }-->
+                <!--}-->
+            <!--});-->
+        <!--}-->
+    <!--</script>-->
+</head>
+<body>
+<!--*遮罩*-->
+<div class="zhezhao">
+</div>
+
+<!--*登录内容*-->
+<div class="tablea">
+    <div class="zc">
+        <div class="zc_left">
+            <img src="../images/icon_bz.png" class="left_tubiao">
+            <div class="left_bt">Z U B</div>
+        </div>
+        <div class="zc_right">
+            <div class="right_bt">泰州金海</div>
+            <div class="right_btx">Welcome!</div>
+            <form id="formdh" onsubmit="return false" action="#" method="post" name="myform">
+                <p class="username"><input name="username" type="text" id="username" tabindex="1" size="15" value="" placeholder="请输入用户名"/></p>
+                <p class="password"><input name="password" type="password" id="password" type="password" tabindex="2" size="16" value="" PLACEHOLDER="请输入密码"/></p>
+                <p class="buttons"><input type="button" value="登录" id="buttons" onclick="login()"></p>
+            </form>
+        </div>
+    </div>
+</div>
+<!--<div id="form-div">-->
+    <!--<form id="form1" onsubmit="return false" action="##" method="post">-->
+        <!--<p>用户名：<input name="userName" type="text" id="txtUserName" tabindex="1" size="15" value=""/></p>-->
+        <!--<p>密　码：<input name="password" type="password" id="TextBox2" tabindex="2" size="16" value=""/></p>-->
+        <!--<p><input type="button" value="登录" onclick="login()">&nbsp;<input type="reset" value="重置"></p>-->
+    <!--</form>-->
+<!--</div>-->
+</body>
+</html>

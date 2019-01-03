@@ -1,0 +1,228 @@
+Starting the Apache2.2 service
+The Apache2.2 service is running.
+rmine the server's fully qualified domain name, using 10.0.0.109 for ServerName
+[Thu Jan 31 20:30:15 2008] [notice] Apache/2.2.8 (Win32) configured -- resuming normal operations
+[Thu Jan 31 20:30:15 2008] [notice] Server built: Jan 18 2008 00:37:19
+[Thu Jan 31 20:30:15 2008] [notice] Parent: Created child process 756
+httpd.exe: Could not reliably determine the server's fully qualified domain name, using 10.0.0.109 for ServerName
+httpd.exe: Could not reliably determine the server's fully qualified domain name, using 10.0.0.109 for ServerName
+[Thu Jan 31 20:30:15 2008] [notice] Child 756: Child process is running
+[Thu Jan 31 20:30:15 2008] [notice] Child 756: Acquired the start mutex.
+[Thu Jan 31 20:30:15 2008] [notice] Child 756: Starting 64 worker threads.
+[Thu Jan 31 20:30:15 2008] [notice] Child 756: Starting thread to listen on port 80.
+[Thu Jan 31 20:30:22 2008] [notice] Parent: Received shutdown signal -- Shutting down the server.
+[Thu Jan 31 20:30:22 2008] [notice] Child 756: Exit event signaled. Child process is ending.
+[Thu Jan 31 20:30:23 2008] [notice] Child 756: Released the start mutex
+[Thu Jan 31 20:30:24 2008] [notice] Child 756: All worker threads have exited.
+[Thu Jan 31 20:30:24 2008] [notice] Child 756: Child process is exiting
+[Thu Jan 31 20:30:24 2008] [notice] Parent: Child process exited successfully.
+Starting the Apache2.2 service
+The Apache2.2 service is running.
+to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Sun Nov 18 10:34:20 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Sun Nov 18 10:34:20 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Sun Nov 18 10:34:20 2018] [notice] Parent: Created child process 3712
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Sun Nov 18 10:34:20 2018] [notice] Child 3712: Child process is running
+[Sun Nov 18 10:34:20 2018] [notice] Child 3712: Acquired the start mutex.
+[Sun Nov 18 10:34:20 2018] [notice] Child 3712: Starting 64 worker threads.
+[Sun Nov 18 10:34:20 2018] [notice] Child 3712: Starting thread to listen on port 8080.
+[Sun Nov 18 11:15:08 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/
+[Mon Nov 19 09:26:07 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Nov 19 09:26:11 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Mon Nov 19 09:26:11 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Mon Nov 19 09:26:11 2018] [notice] Parent: Created child process 2592
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Nov 19 09:26:11 2018] [notice] Child 2592: Child process is running
+[Mon Nov 19 09:26:11 2018] [notice] Child 2592: Acquired the start mutex.
+[Mon Nov 19 09:26:11 2018] [notice] Child 2592: Starting 64 worker threads.
+[Mon Nov 19 09:26:11 2018] [notice] Child 2592: Starting thread to listen on port 8080.
+[Mon Nov 19 20:46:49 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/
+[Thu Nov 22 00:50:35 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Thu Nov 22 00:50:40 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Thu Nov 22 00:50:40 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Thu Nov 22 00:50:40 2018] [notice] Parent: Created child process 2932
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Thu Nov 22 00:50:40 2018] [notice] Child 2932: Child process is running
+[Thu Nov 22 00:50:40 2018] [notice] Child 2932: Acquired the start mutex.
+[Thu Nov 22 00:50:40 2018] [notice] Child 2932: Starting 64 worker threads.
+[Thu Nov 22 00:50:40 2018] [notice] Child 2932: Starting thread to listen on port 8080.
+[Fri Nov 23 00:02:47 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/phpdemo1/phpdemo3.php
+[Sun Nov 25 18:48:44 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Sun Nov 25 18:48:45 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Sun Nov 25 18:48:45 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Sun Nov 25 18:48:45 2018] [notice] Parent: Created child process 2248
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Sun Nov 25 18:48:45 2018] [notice] Child 2248: Child process is running
+[Sun Nov 25 18:48:45 2018] [notice] Child 2248: Acquired the start mutex.
+[Sun Nov 25 18:48:45 2018] [notice] Child 2248: Starting 64 worker threads.
+[Sun Nov 25 18:48:45 2018] [notice] Child 2248: Starting thread to listen on port 8080.
+[Mon Nov 26 13:54:36 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/phpdemo1/phpdemo6.php
+[Fri Nov 30 14:28:38 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Fri Nov 30 14:28:54 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Fri Nov 30 14:28:54 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Fri Nov 30 14:28:54 2018] [notice] Parent: Created child process 2872
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Fri Nov 30 14:28:54 2018] [notice] Child 2872: Child process is running
+[Fri Nov 30 14:28:54 2018] [notice] Child 2872: Acquired the start mutex.
+[Fri Nov 30 14:28:54 2018] [notice] Child 2872: Starting 64 worker threads.
+[Fri Nov 30 14:28:54 2018] [notice] Child 2872: Starting thread to listen on port 8080.
+[Fri Nov 30 14:36:24 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Fri Nov 30 14:36:28 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Fri Nov 30 14:36:28 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Fri Nov 30 14:36:28 2018] [notice] Parent: Created child process 2500
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Fri Nov 30 14:36:28 2018] [notice] Child 2500: Child process is running
+[Fri Nov 30 14:36:28 2018] [notice] Child 2500: Acquired the start mutex.
+[Fri Nov 30 14:36:28 2018] [notice] Child 2500: Starting 64 worker threads.
+[Fri Nov 30 14:36:28 2018] [notice] Child 2500: Starting thread to listen on port 8080.
+[Fri Nov 30 19:53:23 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/
+[Mon Dec 03 11:05:42 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Dec 03 11:05:44 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Mon Dec 03 11:05:44 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Mon Dec 03 11:05:44 2018] [notice] Parent: Created child process 2068
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Dec 03 11:05:44 2018] [notice] Child 2068: Child process is running
+[Mon Dec 03 11:05:44 2018] [notice] Child 2068: Acquired the start mutex.
+[Mon Dec 03 11:05:44 2018] [notice] Child 2068: Starting 64 worker threads.
+[Mon Dec 03 11:05:44 2018] [notice] Child 2068: Starting thread to listen on port 8080.
+[Mon Dec 03 21:06:36 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/phpdemo1/phpdemo3.php
+[Wed Dec 05 15:52:37 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpdemo3
+[Sat Dec 08 03:22:43 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/phpdemo1/phpdemo6.php
+[Sat Dec 08 14:03:47 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/phpindex.php' not found or unable to stat
+[Sat Dec 08 14:04:30 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/phpindex.php' not found or unable to stat
+[Sat Dec 08 14:04:31 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/phpindex.php' not found or unable to stat
+[Sat Dec 08 19:56:58 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/face.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 19:57:03 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/face.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 21:57:37 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/face.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:00:09 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/phpzc.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:00:15 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/phpindex.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:00:33 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/phpindex.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:00:50 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpindex.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:00:54 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpzc.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:01:12 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/phpzc.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:32:35 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:34:20 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:04 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:05 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:05 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:05 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:05 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:06 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:06 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:06 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:06 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:07 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:07 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:07 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:31 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:32 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Sat Dec 08 22:50:57 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sat Dec 08 22:52:42 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/style/2/SCRIPTS.css, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Sun Dec 09 14:14:07 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/images/icon12345678910.png, referer: http://localhost:8080/phpdemo/phpxm/style/2/face.php
+[Sun Dec 09 14:15:49 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/phpxm/images/icon, referer: http://localhost:8080/phpdemo/phpxm/style/2/face.php
+[Sun Dec 09 15:32:33 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Sun Dec 09 15:32:36 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Sun Dec 09 15:32:36 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Sun Dec 09 15:32:39 2018] [notice] Parent: Created child process 2112
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Sun Dec 09 15:32:39 2018] [notice] Child 2112: Child process is running
+[Sun Dec 09 15:32:39 2018] [notice] Child 2112: Acquired the start mutex.
+[Sun Dec 09 15:32:39 2018] [notice] Child 2112: Starting 64 worker threads.
+[Sun Dec 09 15:32:39 2018] [notice] Child 2112: Starting thread to listen on port 8080.
+[Sun Dec 09 15:42:45 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpindex.php
+[Mon Dec 10 00:25:57 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:25:59 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:26:06 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:26:07 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:26:07 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:26:07 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:28:24 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:28:25 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:28:26 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:28:26 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:28:30 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 10 00:28:30 2018] [error] [client 127.0.0.1] script 'D:/phphj/AppServ/www/phpdemo/phpxm/style/2/image.php' not found or unable to stat, referer: http://localhost:8080/phpdemo/phpxm/style/2/phpzc.php
+[Mon Dec 17 00:25:01 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/
+[Mon Dec 17 16:42:24 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Dec 17 16:42:27 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Mon Dec 17 16:42:27 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Mon Dec 17 16:42:27 2018] [notice] Parent: Created child process 2436
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Dec 17 16:42:27 2018] [notice] Child 2436: Child process is running
+[Mon Dec 17 16:42:27 2018] [notice] Child 2436: Acquired the start mutex.
+[Mon Dec 17 16:42:27 2018] [notice] Child 2436: Starting 64 worker threads.
+[Mon Dec 17 16:42:27 2018] [notice] Child 2436: Starting thread to listen on port 8080.
+[Tue Dec 18 00:21:50 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/zxweb/includs/logodlxi
+[Tue Dec 18 00:43:57 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/includs/login.html, referer: http://localhost:63342/www/phpdemo/zxweb/html/index.html
+[Tue Dec 18 00:44:04 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/includs/login.html, referer: http://localhost:63342/www/phpdemo/zxweb/html/index.html
+[Tue Dec 18 21:20:31 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/zxweb/html/index.html
+[Tue Dec 18 21:21:05 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/html/js, referer: http://localhost:8080/phpdemo/zxweb/html/setting/jscreate.html
+[Tue Dec 18 22:03:21 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/www
+[Tue Dec 18 22:03:21 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/www/phpdemo/zxweb/html/login.html
+[Tue Dec 18 22:03:25 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/www
+[Tue Dec 18 22:05:20 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/zxweb/html/index.html
+[Fri Dec 21 01:56:11 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/zxweb/html/
+[Mon Dec 24 03:16:40 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/includs/login/zhanghaoguanli, referer: http://localhost:8080/phpdemo/zxweb/html/setting/yhglcreate.html
+[Mon Dec 24 17:46:09 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/
+[Mon Dec 24 20:48:51 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/includs/login/zhanghaoguanli, referer: http://localhost:63342/www/phpdemo/zxweb/html/setting/yhgl.html?_ijt=js5ogl1gae79o5q7jnun389q4k
+[Mon Dec 24 23:33:07 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/includs/login/zhanghaoguanli, referer: http://localhost:8080/phpdemo/zxweb/html/setting/yhgl.html
+[Wed Dec 26 04:00:58 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Wed Dec 26 04:01:41 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Wed Dec 26 04:01:41 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Wed Dec 26 04:01:41 2018] [notice] Parent: Created child process 4132
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Wed Dec 26 04:01:41 2018] [notice] Child 4132: Child process is running
+[Wed Dec 26 04:01:41 2018] [notice] Child 4132: Acquired the start mutex.
+[Wed Dec 26 04:01:41 2018] [notice] Child 4132: Starting 64 worker threads.
+[Wed Dec 26 04:01:41 2018] [notice] Child 4132: Starting thread to listen on port 8080.
+[Sun Dec 30 14:36:25 2018] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/phpxm/
+[Mon Dec 31 10:44:42 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Dec 31 10:44:47 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Mon Dec 31 10:44:47 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Mon Dec 31 10:44:47 2018] [notice] Parent: Created child process 1800
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Dec 31 10:44:47 2018] [notice] Child 1800: Child process is running
+[Mon Dec 31 10:44:47 2018] [notice] Child 1800: Acquired the start mutex.
+[Mon Dec 31 10:44:47 2018] [notice] Child 1800: Starting 64 worker threads.
+[Mon Dec 31 10:44:47 2018] [notice] Child 1800: Starting thread to listen on port 8080.
+[Mon Dec 31 15:57:07 2018] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Dec 31 15:57:08 2018] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Mon Dec 31 15:57:08 2018] [notice] Server built: Jan 18 2008 00:37:19
+[Mon Dec 31 15:57:08 2018] [notice] Parent: Created child process 1780
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Mon Dec 31 15:57:08 2018] [notice] Child 1780: Child process is running
+[Mon Dec 31 15:57:08 2018] [notice] Child 1780: Acquired the start mutex.
+[Mon Dec 31 15:57:08 2018] [notice] Child 1780: Starting 64 worker threads.
+[Mon Dec 31 15:57:08 2018] [notice] Child 1780: Starting thread to listen on port 8080.
+[Tue Jan 01 10:27:59 2019] [warn] pid file D:/phphj/AppServ/Apache2.2/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Tue Jan 01 10:28:00 2019] [notice] Apache/2.2.8 (Win32) PHP/5.2.6 configured -- resuming normal operations
+[Tue Jan 01 10:28:00 2019] [notice] Server built: Jan 18 2008 00:37:19
+[Tue Jan 01 10:28:01 2019] [notice] Parent: Created child process 1832
+PHP Warning:  PHP Startup: Unable to load dynamic library 'D:/phphj/AppServ\\php5\\ext\\php_exif.dll' - \xd5\xd2\xb2\xbb\xb5\xbd\xd6\xb8\xb6\xa8\xb5\xc4\xc4\xa3\xbf\xe9\xa1\xa3\r\n in Unknown on line 0
+[Tue Jan 01 10:28:01 2019] [notice] Child 1832: Child process is running
+[Tue Jan 01 10:28:01 2019] [notice] Child 1832: Acquired the start mutex.
+[Tue Jan 01 10:28:01 2019] [notice] Child 1832: Starting 64 worker threads.
+[Tue Jan 01 10:28:01 2019] [notice] Child 1832: Starting thread to listen on port 8080.
+[Tue Jan 01 19:38:55 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/
+[Tue Jan 01 19:39:01 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/html/setting/lslist.html, referer: http://localhost:8080/phpdemo/zxweb/html/
+[Tue Jan 01 19:58:16 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/zxweb/html/
+[Wed Jan 02 16:34:47 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/zxweb/html/login.html
+[Wed Jan 02 17:01:30 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/html/financialmanagement/yhglcreate.html, referer: http://localhost:8080/phpdemo/zxweb/html/financialmanagement/lslist.html
+[Wed Jan 02 17:01:43 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/html/financialmanagement/yhglcreate.html, referer: http://localhost:8080/phpdemo/zxweb/html/financialmanagement/lslist.html
+[Wed Jan 02 17:01:47 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/zxweb/html/
+[Wed Jan 02 17:01:58 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/html/financialmanagement/yhglcreate.html, referer: http://localhost:8080/phpdemo/zxweb/html/financialmanagement/lslist.html
+[Thu Jan 03 12:43:23 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/phpdemo/zxweb/includs/validatelogon
+[Thu Jan 03 23:06:21 2019] [error] [client 127.0.0.1] File does not exist: D:/phphj/AppServ/www/favicon.ico, referer: http://localhost:8080/phpdemo/zxweb/html/index.html

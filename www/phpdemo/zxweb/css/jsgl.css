@@ -1,0 +1,23 @@
+#buttond:hover{
+    background: #207dce !important;
+}
+#myform{
+    width:100%;
+    float: left;
+    margin-top: 30px;
+}
+.jsgl_xj{
+    margin-right: 30px;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 10px;
+    float: right;
+    background: #3592e2 !important;
+    color: #ffffff;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.jsgl_xj:hover{
+    background: #207dce !important;
+}

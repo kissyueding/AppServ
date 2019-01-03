@@ -1,0 +1,115 @@
+
+body{
+    width: 100%;
+    height: 100%;
+    background: url("../images/bj.jpg") no-repeat;
+    /* 背景图垂直、水平均居中 */
+    background-position: center center;
+    /* 背景图不平铺 */
+    background-repeat: no-repeat;
+    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+    background-attachment: fixed;  /*此条属性必须设置否则可能无效/
+    /* 让背景图基于容器大小伸缩 */
+    background-size: cover;
+}
+.zhezhao{
+    width: 100%;
+    height: 100%;
+    float: left;
+    background:#193853;
+    opacity: 0.8;
+}
+.tablea{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left: 0px;
+}
+.zc{
+    width: 900px;
+    height: 500px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-250px 0 0 -450px;
+}
+.zc_left{
+    width:550px;
+    height:500px;
+    float: left;
+    background: url("../images/bj_tm2.png") no-repeat;
+}
+.left_tubiao{
+    width:60px;
+    height:100px;
+    margin: 120px 245px 0px 245px ;
+}
+.left_bt{
+    width:550px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0px;
+    color: #ffffff;
+}
+
+
+.zc_right{
+    width:350px;
+    height: 500px;
+    background: #ffffff;
+    float: left;
+    background: url("../images/bj_tm3.jpg") no-repeat;
+}
+.right_bt{
+    width:100%;
+    font-size: 30px;
+    text-align: center;
+    color:#709cc2;
+    margin-top: 100px;
+}
+.right_btx{
+    width:100%;
+    font-size: 16px;
+    text-align: center;
+    color:#cbd7e1;
+    margin-bottom: 40px;
+}
+#formdh{
+    width:100%;
+    float:left;
+    text-align: center;
+}
+.username,.password{
+    width:200px;
+    margin-left:75px;
+    float: left;
+    border-bottom: #b9c6d1 solid 1px;
+    margin-top: 10px;
+    height:35px;
+    line-height: 30px;
+}
+#username,#password{
+    width:100%;
+    text-align: center;
+    height:30px;
+}
+.buttons{
+    width:100%;
+    float: left;
+    margin-top: 50px;
+}
+#buttons{
+    width:200px;
+    height: 36px;
+    background: #3592e2;
+    color: #ffffff;
+    border-radius: 80px;
+    line-height: 36px;
+    cursor: pointer;
+}
+#buttons:hover{
+    background: #207dce;
+}

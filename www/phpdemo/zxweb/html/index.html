@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;width: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>框架</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script src="../js/zujian.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        window.onload=function () {
+            zk();//收缩展开菜单
+            xv();
+            var dataNumber='';
+            poster('post','json','includs/login/logodlxi',true,dataNumber,function (data) {
+                // var title=data.msg;
+                if(data.code===200){
+                    setValueForDiv("zh",data.username);
+                }else{
+                    var title=data.msg;
+                    cs("300px","50px",title,true,false)
+                    setTimeout(function () {
+                        close();
+                        window.location.href='login.html';
+                    },1000)
+                }
+            })
+        }
+        //获取a标签的值,改变标题内容
+        function hqbt(target) {
+           var title=$(target).text();
+            setValueForDiv("kjright_center_bt",title);
+        }
+        //注销
+        function zhuxiao() {
+            var dataNumber={
+                action:1
+            };
+            poster('post','json','includs/login/zhuxiao',true,dataNumber,function (data) {
+                console.log(data)
+                var title=data.msg;
+                if(data.code===200){
+                    cs("300px","50px",title,true,false)
+                    setTimeout(function () {
+                        close();
+                    },2000)
+                    setTimeout(function () {
+                        window.location.href='login.html';
+                    },2000)
+
+                }else{
+                    cs("300px","50px",title,true,false)
+                    setTimeout(function () {
+                        close();
+                    },2000)
+                }
+            })
+        }
+
+    </script>
+<style>
+    .kjright_center_bt{
+        width:100%;
+        height: 50px;
+        font-size: 18px;
+        color: #193853;
+        line-height: 50px;
+        border-bottom: #efefef solid 10px;
+        text-indent: 30px;
+        background: #ffffff;
+        float: left;
+    }
+</style>
+</head>
+<body style="width: 100%;height: 100%;">
+<div class="bodys">
+    <!--左侧-->
+    <div class="kjleft">
+        <div class="kjleft_top">
+            <img src="../images/icon_bz.png" style="width: 30px;height: 40px;float: left;margin-left:30px;margin-top: 10px; ">
+            <p style="margin-left: 20px;color: #ffffff;font-size: 24px;font-weight: bold;line-height: 60px;float: left;margin-left: 10px">ZWB管理系统</p>
+        </div>
+        <div class="kjleft_center">
+            <!--<ul style="list-style-type:none;width: 100%;float: left;font-size: 16px; color: #dce3ea" class="kjleft_centerul">-->
+                <!--<li style="width:100%;float: left;">-->
+                    <!--<div style="width: 100%;float: left;height: 60px;line-height: 60px;" class="kjleft_centerdiv">-->
+                        <!--<i class="iconfont " style="color: #dce3ea;font-size: 24px;margin-left: 30px;float: left;">&#xe653;</i>-->
+                        <!--<p style="float: left;margin-left: 10px;">账户设置</p>-->
+                        <!--<i class="iconfont " style="color: #dce3ea;font-size: 24px;float: right;margin-right:20px;">&#xe66a;</i>-->
+                    <!--</div>-->
+                    <!--<ul class='kjleft_centerulb' style="width: 100%;float: left;margin-left: 80px;list-style-type:none;height: 60px;line-height: 60px;">-->
+                        <!--<li>账户列表</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+
+            <div class="navMenubox">
+                <div id="slimtest1">
+                    <div class="navMenu-top">
+                        <div id="mini" style=""><i class="fa fa-bars fa-2x"></i></div>
+                    </div>
+                    <ul class="navMenu" id="slimtestul">
+                        <li> <a href="javascript:;" class="afinve"> <i class="iconfont" style="margin-left: 30px;">&#xe653;</i> <span class="">主页</span> <span class="arrow"></span> </a>
+                            <ul class="sub-menu" >
+                                <li><a href="setting/yhgl.html" target="menuFrame" ><span>用户管理</span></a></li>
+                                <li><a href="javascript:;"><span>角色管理</span></a></li>
+                                <li><a href="javascript:;"><span>权限管理</span></a></li>
+                                <li><a href="javascript:;"><span>我的任务</span></a></li>
+                                <li > <a href="javascript:;" class="afinve"><span>个人信息</span><span class="arrow"></span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:;" ><span>我的个人资料</span></a></li>
+                                        <li><a href="javascript:;"><span>我的日历</span></a></li>
+                                        <li><a href="javascript:;"><span>我的收件箱</span></a></li>
+                                        <li><a href="javascript:;"><span>我的任务</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class=""> <a href="javascript:;" class="afinve"><i class="my-icon nav-icon iconfont" style="margin-left: 30px;">&#xe653;</i><span>文章管理</span></a> </li>
+                        <li > <a href="javascript:;" class="afinve"> <i class="iconfont" style="margin-left: 30px;">&#xe653;</i> <span class="nav-text">财务管理</span> <i class="iconfont " style="font-size: 18px;float: right;margin-right:10px;">&#xe66a;</i> </a>
+                            <ul class="sub-menu">
+                                <li><a href="financialmanagement/lslist.html" target="menuFrame" style="margin-left: 30px;" onclick="hqbt(this)"><span>日常流水</span></a></li>
+                                <li><a href="setting/yhgl.html"  class="afinve" style="margin-left: 30px;" target="menuFrame" onclick="hqbt(this)" ><span >用户管理</span></a></li>
+                                <li><a href="javascript:;" style="margin-left: 30px;" onclick="hqbt(this)"><span>系统参数</span></a></li>
+                            </ul>
+                        </li>
+                        <li > <a href="javascript:;" class="afinve"> <i class="iconfont" style="margin-left: 30px;">&#xe653;</i> <span class="nav-text">系统管理</span> <i class="iconfont " style="font-size: 18px;float: right;margin-right:10px;">&#xe66a;</i> </a>
+                            <ul class="sub-menu">
+                                <li><a href="setting/jsgl.html" target="menuFrame" style="margin-left: 30px;" onclick="hqbt(this)"><span>角色管理</span></a></li>
+                                <li><a href="setting/yhgl.html"  class="afinve" style="margin-left: 30px;" target="menuFrame" onclick="hqbt(this)" ><span >用户管理</span></a></li>
+                                <li><a href="javascript:;" style="margin-left: 30px;" onclick="hqbt(this)"><span>系统参数</span></a></li>
+                            </ul>
+                        </li>
+                        <li > <a href="javascript:;" class="afinve"> <i class="iconfont" style="margin-left: 30px;">&#xe653;</i> <span class="nav-text">统计报表</span> <span class="arrow"></span> </a>
+                            <ul class="sub-menu">
+                                <li><a href="javascript:;"  class="afinve" style="margin-left: 30px;"><span>发运表</span></a></li>
+                                <li><a href="javascript:;" style="margin-left: 30px;"><span>发运结算表</span></a></li>
+                                <li><a href="javascript:;" style="margin-left: 30px;"><span>自营车表</span></a></li>
+                                <li><a href="javascript:;" style="margin-left: 30px;"><span>导入发运报表</span></a></li>
+                                <li > <a href="javascript:;" class="afinve" style="margin-left: 30px;"><span>打印</span><span class="arrow"></span></a>
+                                    <ul class="sub-menu" >
+                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>发运结算表</span></a></li>
+                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>应收发运单</span></a></li>
+                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>自营车</span></a></li>
+                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>应付发运单</span></a></li>
+                                    </ul>
+                                </li>
+                                <li > <a href="javascript:;" class="afinve" style="margin-left: 30px;"><span>数据查询</span><span class="arrow"></span></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>发运单查询</span></a></li>
+                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>自营车查询</span></a></li>
+                                        <li > <a href="javascript:;" class="afinve" style="margin-left: 30px;"><span>报账明细</span><span class="arrow"></span></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="javascript:;" style="margin-left: 30px;"><span>报账明细1</span></a></li>
+                                                <li><a href="javascript:;" style="margin-left: 30px;"><span>报账明细1</span></a></li>
+                                                <li><a href="javascript:;" style="margin-left: 30px;"><span>报账明细1</span></a></li>
+                                                <li><a href="javascript:;" style="margin-left: 30px;"><span>报账明细1</span></a></li>
+                                                <li > <a href="javascript:;" class="afinve" style="margin-left: 30px;"><span>自营车汇总表</span><span class="arrow"></span></a>
+                                                    <ul class="sub-menu">
+                                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>自营车汇总表1</span></a></li>
+                                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>自营车汇总表2</span></a></li>
+                                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>自营车汇总表4</span></a></li>
+                                                        <li><a href="javascript:;" style="margin-left: 30px;"><span>自营车汇总表3</span></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--右侧-->
+    <div class="kjright">
+        <div class="kjright_top">
+            <div class="kjright_top_left">
+                <i class="iconfont " style="font-size: 24px;float: left;margin-left:40px;line-height: 60px;">&#xe600;</i>
+            </div>
+            <div class="kjright_top_right">
+                <i class="iconfont" style="font-size: 40px;float: left;margin-left: 140px;line-height: 60px;">&#xe625;</i>
+                <div id="zh" class="zh" style="float: left;line-height: 60px;width:120px;overflow: hidden; "></div>
+                <i id='iconxl' class="iconfont " style="font-size: 24px;float: right;margin-right:30px;line-height: 60px;">&#xe66a;</i>
+                <div id="xla" class="">
+                    <ul>
+                        <li>消费者服务</li>
+                        <li>产品信息</li>
+                        <li onclick="zhuxiao()">退出</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="kjright_center">
+            <div class="kjright_center_bt" id="kjright_center_bt">首页</div>
+            <iframe id="menuFrame" name="menuFrame" src="" style="overflow:visible;width: 100%;height: calc(100% - 60px);float: left;" scrolling="yes" frameborder="no" >
+            </iframe>
+        </div>
+        <div class="kjright_footer">3</div>
+    </div>
+</div>
+
+<!--收缩展开菜单-->
+
+<script src="../js/jquery.slimscroll.min.js"></script>
+</body>
+</html>

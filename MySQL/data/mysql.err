@@ -1,0 +1,90 @@
+InnoDB: The first specified data file .\ibdata1 did not exist:
+InnoDB: a new database to be created!
+181118 10:34:02  InnoDB: Setting file .\ibdata1 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+181118 10:34:02  InnoDB: Log file .\ib_logfile0 did not exist: new to be created
+InnoDB: Setting log file .\ib_logfile0 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+181118 10:34:03  InnoDB: Log file .\ib_logfile1 did not exist: new to be created
+InnoDB: Setting log file .\ib_logfile1 size to 10 MB
+InnoDB: Database physically writes the file full: wait...
+InnoDB: Doublewrite buffer not found: creating new
+InnoDB: Doublewrite buffer created
+InnoDB: Creating foreign key constraint system tables
+InnoDB: Foreign key constraint system tables created
+181118 10:34:03  InnoDB: Started; log sequence number 0 0
+181118 10:34:03 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181118 10:34:10 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Normal shutdown
+
+181118 10:34:10  InnoDB: Starting shutdown...
+181118 10:34:11  InnoDB: Shutdown completed; log sequence number 0 43655
+181118 10:34:11 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Shutdown complete
+
+181118 10:34:20  InnoDB: Started; log sequence number 0 43655
+181118 10:34:20 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181119  1:21:13 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Normal shutdown
+
+181119  9:26:08  InnoDB: Started; log sequence number 0 43655
+181119  9:26:10 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181122  0:49:28 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Normal shutdown
+
+181122  0:49:32  InnoDB: Starting shutdown...
+181122  0:49:38  InnoDB: Shutdown completed; log sequence number 0 43655
+181122  0:49:39 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Shutdown complete
+
+181122  0:50:35  InnoDB: Started; log sequence number 0 43655
+181122  0:50:36 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181125 18:47:14 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Normal shutdown
+
+181125 18:47:15  InnoDB: Starting shutdown...
+181125 18:47:22  InnoDB: Shutdown completed; log sequence number 0 43655
+181125 18:47:22 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Shutdown complete
+
+181125 18:48:46  InnoDB: Started; log sequence number 0 43655
+181125 18:48:46 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181130 14:28:40  InnoDB: Started; log sequence number 0 43655
+181130 14:28:41 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181130 14:36:26  InnoDB: Started; log sequence number 0 43655
+181130 14:36:29 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181203  2:54:31 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Normal shutdown
+
+181203  2:54:32  InnoDB: Starting shutdown...
+181203  2:54:38  InnoDB: Shutdown completed; log sequence number 0 43655
+181203  2:54:38 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Shutdown complete
+
+181203 11:05:44  InnoDB: Started; log sequence number 0 43655
+181203 11:05:45 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181209 15:32:34  InnoDB: Started; log sequence number 0 43655
+181209 15:32:37 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181217 16:42:26  InnoDB: Started; log sequence number 0 43655
+181217 16:42:27 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181226  3:59:21 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Normal shutdown
+
+181226  4:01:00  InnoDB: Started; log sequence number 0 43655
+181226  4:01:01 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181231 10:44:48  InnoDB: Started; log sequence number 0 43655
+181231 10:44:49 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+181231 15:57:14  InnoDB: Started; log sequence number 0 43655
+181231 15:57:15 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)
+190101  1:18:16 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Normal shutdown
+
+190101  1:18:16  InnoDB: Starting shutdown...
+190101  1:18:17  InnoDB: Shutdown completed; log sequence number 0 43655
+190101  1:18:17 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: Shutdown complete
+
+190101 10:28:03  InnoDB: Started; log sequence number 0 43655
+190101 10:28:03 [Note] D:\phphj\AppServ\MySQL\bin\mysqld-nt: ready for connections.
+Version: '5.0.51b-community-nt-log'  socket: ''  port: 3306  MySQL Community Edition (GPL)

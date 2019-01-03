@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/common.js"></script>
+    <script src="../../js/zujian.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <!--//用来接收页面之间的传值-->
+    <script src="../../js/jquery.params.js"></script>
+    <link rel="stylesheet" href="../../cj/layui/css/layui.css" media="all">
+    <style>
+        .yhglcreate{
+            width:100%;
+            /*height: 100%;*/
+            min-height:700px;
+            background: #ffffff;
+            padding-top: 30px !important;
+        }
+        input{
+            width: 280px !important;
+            border-radius: 6px !important;
+            height: 36px !important;
+            line-height: 36px !important;
+        }
+    </style>
+</head>
+<body>
+<div class="yhglcreate">
+    <form class="layui-form" onsubmit="return false" action="#" method="post" name="formname" lay-filter="formname">
+        <div class="layui-form-item">
+            <label class="layui-form-label">账号名称</label>
+            <div class="layui-input-block">
+                <input id="username" type="text" name="username" required  lay-verify="required" placeholder="请输入账号名称" autocomplete="off" class="layui-input" >
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">账号密码</label>
+            <div class="layui-input-inline">
+                <input id="password" type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+            </div>
+            <!--<div class="layui-form-mid layui-word-aux">辅助文字</div>-->
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">关联姓名</label>
+            <div class="layui-input-block">
+                <input id="glname" type="text" name="glname" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色选择</label>
+            <div class="layui-input-block" style="width:280px !important;">
+                <select name="role" required  lay-verify="required" id="role" lay-filter="test2">
+                    <option value="0">请选择</option>
+                    <!--<option value="1">123123</option>-->
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">账号适用</label>
+            <div class="layui-input-block">
+                <input type="checkbox" name="pc" lay-skin="primary" title="电脑端">
+                <input type="checkbox" name="yd" lay-skin="primary" title="移动端">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">权限等级</label>
+            <div class="layui-input-block">
+                <input type="radio" name="rolejb" value="1" title="1级">
+                <input type="radio" name="rolejb" value="2" title="2级" checked>
+                <input type="radio" name="rolejb" value="3" title="3级" checked>
+                <!--<input type="radio" name="rolejb" value="3" title="3级" checked>-->
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">关联号码</label>
+            <div class="layui-input-block">
+                <input type="text" id="telphone" name="telphone"   lay-verify="required" placeholder="请输入关联手机号码，可不填" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo" >立即提交</button>
+                <button class="layui-btn layui-btn-primary" id="qx">取消</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+<script src="../../cj/layui/layui.js"></script>
+<script>
+    var roles='';
+    var couna='';
+    var id='';
+    var usernames='';
+    var passwords='';
+    var roletype='';
+    var role='';
+    var rolejb='';
+    var glname='';
+    var telphone='';
+    var rolesId='';
+    var roletypea='';
+    var roletypes='';
+    $(function(){
+        getData1();
+    });
+
+    function getData1(){
+        console.log('wsaSa')
+        couna = $.query.get("couna");
+        if (couna===1){
+            console.log(couna)
+        }
+        if(couna===2){
+            id = $.query.get("id");
+            usernames = $.query.get("usernames");
+            passwords= $.query.get("passwords");
+            roletype= $.query.get("roletype");
+            role= $.query.get("role");
+            rolesId=$.query.get("rolesId");
+            rolejb= $.query.get("rolejb");
+            glname= $.query.get("glname");
+            telphone= $.query.get("telphone");
+            roletype=$.query.get("roletype");
+        }
+    }
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form;
+        var gh='';
+        $(document).on('click','#qx',function(){
+            window.location.href='yhgl.html'
+         });
+        $(document).ready(function () {
+            var dataNumber='';
+            poster('get','json','includs/xlrolelist',true,dataNumber,function (data) {
+                    console.log(data)
+                    var title=data.msg;
+                    if(data.code===200){
+                        if(data.list==null){
+                            gh=1;
+                            cs("300px","50px",title,true,false)
+                            setTimeout(function () {
+                                close();
+                            },2000)
+                        }
+                        else{
+                            gh=2;
+                            $.each(data.list,function(index,item){
+                                $('#role').append(new Option(item.rolename,item.id));// 下拉菜单里添加元素
+                            })
+                            form.render('select');//下拉菜单渲染 把内容加载进去
+                            if(couna===2){
+                                $("#role").val(rolesId);
+                                form.render('select');//下拉菜单渲染 把内容加载进去
+                                if(roletype=="pc端,移动端"){
+                                    roletypea="on";
+                                    roletypes="on";
+                                }
+                                if(roletype=="pc端"){
+                                    roletypea="on";
+                                    roletypes="of";
+                                }
+                                if(roletype=="移动端"){
+                                    roletypea="of";
+                                    roletypes="on";
+                                }
+
+                                form.val("formname", {
+                                    "username": usernames
+                                    ,"password": passwords
+                                    ,"glname":glname
+                                    ,"telphone":telphone
+                                    ,"role":rolesId
+                                    ,"rolejb":rolejb
+                                    ,"pc":roletypea
+                                    ,"yd":roletypes
+                                })
+                            }
+
+                        }
+
+                        // layui.form.render('select', 'test2');
+                    }
+                }
+            )
+        });
+
+        //获取下拉值
+        form.on('select(test2)', function(data){
+            role=data.value;
+            test2=data.elem[data.elem.selectedIndex].text;
+            roles=test2;
+            form.render('select');
+        });
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            if(gh===2){
+                if (data.field.role=='0'){
+                    var title='您还未选择角色'
+                    cs("300px","50px",title,true,false)
+                    setTimeout(function () {
+                        close();
+                    },2000)
+                    return false;
+                }
+                else{
+                    console.log(data.field); //得到美化后的DOM对象
+                    // layer.msg(JSON.stringify(data.field));
+                    console.log(data.field.pc)
+                    var dataNumber=new Object();
+                    dataNumber.id=id;
+                    dataNumber.usernames=data.field.username;
+                    dataNumber.passwords=data.field.password;
+                    dataNumber.rolesId=data.field.role;
+                    dataNumber.role=roles;//角色名称
+                    // dataNumber.roletype=$_POST['roletype'];//账户适用在那种设备，有三种：1.pc端和2.移动端以及3.都适用
+                    dataNumber.rolejb=data.field.rolejb;//账户权限
+                    dataNumber.glname=data.field.glname;//关联名字
+                    dataNumber.telphone=data.field.telphone;//关联的号码
+                    if(data.field.pc=="on" && data.field.yd=="on"){
+                        dataNumber.roletype='pc端,移动端';//用于所有
+                        console.log(dataNumber)
+                    }
+                    else if(data.field.pc=="on"){
+                        dataNumber.roletype='pc端';//用于pc端
+                    }
+                    else if(data.field.yd=="on"){
+                        dataNumber.roletype='移动端';//用于移动端
+                    }
+                    console.log(dataNumber)
+                    if(couna===1){
+                        dataNumber.counts=1;
+                        poster('post','json','/includs/zhanghaoguanli/Createaccount',true,dataNumber,function (data) {
+                                console.log(data)
+                                var title=data.msg;
+                                if(data.code===200){
+                                    cs("300px","50px",title,true,false)
+                                    setTimeout(function () {
+                                        close();
+                                    },2000)
+                                    layui.form.render('select', 'test2');
+                                    setTimeout(function () {
+                                        window.location.href='yhgl.html'
+                                    },2000)
+                                }
+                                else if(data.code===300){
+                                    cs("300px","50px",title,true,false)
+                                    setTimeout(function () {
+                                        close();
+                                    },2000)
+                                    setTimeout(function () {
+                                        window.location.href='yhgl.html'
+                                    },2000)
+                                }
+                            }
+                        )
+                    }
+                    else if(couna===2){
+                        dataNumber.counts=2;
+                        poster('post','json','/includs/zhanghaoguanli/Acounteditor',true,dataNumber,function (data) {
+                                console.log(data)
+                                var title=data.msg;
+                                if(data.code===200){
+                                    cs("300px","50px",title,true,false)
+                                    setTimeout(function () {
+                                        close();
+                                    },2000)
+                                    layui.form.render('select', 'test2');
+                                    setTimeout(function () {
+                                        window.location.href='yhgl.html'
+                                    },2000)
+                                }
+                                else if(data.code===300){
+                                    cs("300px","50px",title,true,false)
+                                    setTimeout(function () {
+                                        close();
+                                    },2000)
+                                    setTimeout(function () {
+                                        window.location.href='yhgl.html'
+                                    },2000)
+
+                                }
+                            }
+                        )
+                    }
+
+                    return false;
+                }
+
+            }
+            if(gh===1){
+                var title='您还未选择角色，如果没有请前往创建'
+                cs("300px","50px",title,true,false)
+                setTimeout(function () {
+                    close();
+                },2000)
+            }
+
+        });
+
+    });
+</script>
+</body>
+</html>

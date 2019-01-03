@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sdaasdasd</title>
+    <link rel="stylesheet" href="../../css/jscreate.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/common.js"></script>
+    <script src="../../js/zujian.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../cj/layui/css/layui.css" media="all">
+    <!--//用来接收页面之间的传值-->
+    <script src="../../js/jquery.params.js"></script>
+    <script>
+        var couna='';
+        var id='';
+        var rolename='';
+        $(function(){
+            getData1();
+        });
+
+        function getData1(){
+            console.log('wsaSa')
+            couna = $.query.get("couna");
+            console.log(rolename)
+            if (couna===1){
+                console.log(couna)
+            }
+            if(couna===2){
+                id = $.query.get("id");
+                rolename = $.query.get("rolename");
+                $("#username").val(rolename);
+                console.log(id)
+            }
+        }
+        function submints() {
+            var username=myform.username.value;
+            dataNumber=new Object();
+            dataNumber.rolename=username;
+            if(couna===1){
+                poster('post','json','includs/Newrolecreate',true,dataNumber,function (data) {
+                    console.log(data)
+                    console.log("12312")
+                    var title=data.msg;
+                    if(data.code===200){
+                        cs("300px","50px",title,true,false)
+                        setTimeout(function () {
+                            close();
+                        },2000)
+                        setTimeout(function () {
+                            window.location.href='jsgl.html';
+                        },2000)
+
+                    }else{
+                        cs("300px","50px",title,true,false)
+                        setTimeout(function () {
+                            close();
+                        },1000)
+                    }
+                })
+            }
+            else if(couna===2){
+                console.log('这是编辑')
+                dataNumber.id=id;
+                dataNumber.counts=2;
+                poster('post','json','includs/Deleteeditroles',true,dataNumber,function (data) {
+                    // console.log(data)
+                    var title=data.msg;
+                    if(data.code===200){
+                        cs("300px","50px",title,true,false)
+                        setTimeout(function () {
+                            close();
+                        },2000)
+                        setTimeout(function () {
+                            window.location.href='jsgl.html';
+                        },2000)
+
+                    }else{
+                        cs("300px","50px",title,true,false)
+                        setTimeout(function () {
+                            close();
+                        },1000)
+                    }
+                })
+            }
+
+        }
+        function qx() {
+            window.location.href='jsgl.html'
+        }
+    </script>
+</head>
+<body style="width: 100% !important;height: 100% !important;background:#ffffff;">
+<div class="jscreate_body">
+    <form id="formdh" onsubmit="return false" action="#" method="post" name="myform">
+        <p class="formdh_bt">角色名称：</p><input name="username" type="text" id="username" tabindex="1" size="15" value="" placeholder="请输入用户名"/>
+        <!--<p class="buttons"><input  type="button" value="提交" id="button1" onclick="submints()" style="cursor: pointer"></p>-->
+        <div class="layui-form-item" style="margin-top: 30px !important;float: left;">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo" onclick="submints()" style="cursor: pointer" >立即提交</button>
+                <button  class="layui-btn layui-btn-primary" onclick="qx()">取消</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

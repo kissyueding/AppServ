@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日常流水表</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <script src="../../js/common.js"></script>
+    <script src="../../js/zujian.js"></script>
+    <script src="../../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../css/jsgl.css">
+    <link rel="stylesheet" href="../../cj/layui/css/layui.css" media="all">
+    <script>
+        function tz() {
+            var coui=1;
+            window.location.href='lscreate.html?couna='+coui
+        }
+    </script>
+    <style>
+        .jsgl_sc{
+            margin-left: 30px;
+            width: 98px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 10px;
+            border: #cccccc solid 1px;
+            float: left;
+            background: #ffffff !important;
+            color: #666666;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .jsgl_sc:hover{
+            background: #cccccc !important;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body style="width: 100%;height: 100%;background: #ffffff;">
+<div class="jsgl_search">
+    <form method="post" action="" name="myform" id="myform" class="layui-form">
+        <input type="text" placeholder="请输入流水账号名称" name="lsname" value="" style="padding-left:20px;width: 230px;height: 36px;border-radius: 6px;border: #efefef solid 1px;margin-left: 30px;float:left;">
+        <input class='layui-btn' id="buttond" lay-submit lay-filter="*" type="button" value="搜索"  style="cursor: pointer;width: 100px;height: 38px;background:#3592e2 !important; ;border-radius: 10px;margin-left:30px;color: #ffffff;line-height: 38px;float:left;">
+    </form>
+    <input type="button" class="jsgl_sc" value="删除" >
+    <input type="button" onclick="tz()" value="添加流水" class="jsgl_xj " >
+    <div style="width: calc(100% - 60px);float: left;margin-left: 30px;margin-top: 20px;">
+        <table id="demo" lay-filter="test" lay-data="{id: 'demo'}" style="width:100% !important;"></table>
+    </div>
+
+
+
+</div>
+<script src="../../cj/layui/layui.js"></script>
+<script type="text/html" id="barDemo">
+    <!--判断权限显示编辑，删除-->
+    {{#  if(d.roletype !=='pc端,移动端,全'){ }}
+    <a class="layui-btn layui-btn-xs layui-bg-blue" lay-event="edit" id="editors">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    <!--<a class="layui-btn layui-btn-xs" lay-event="check">审核</a>-->
+    {{#  } }}
+</script>
+<script>
+
+    layui.use(['table','form','layer','laypage'], function(){
+        var urls='http://localhost:8080/phpdemo/zxweb/';
+        var laypage=layui.laypage;
+        var table = layui.table;
+        var form = layui.form;
+        var $ = layui.jquery;
+        var layer = layui.layer;//弹出层
+        var couny='';
+        // var pageSize=10;
+        // var pageNum=10
+        //加载表格实例
+        table.render({
+            id: 'demo'
+            ,elem: '#demo'
+            ,url: urls+'includs/finanicalmanagement/lslist' //数据接口
+            ,page: true //开启分页
+            ,even: true//开启斑马线
+            ,method:'post'
+            ,loading:true//是否显示加载
+            ,text: {
+                none: '暂无相关数据' //默认：无数据。注：该属性为 layui 2.2.5 开始新增
+            }
+            ,title: '日常流水表'
+            ,where:{
+                lsname:myform.lsname.value
+                // ,pageSize:10
+                // ,pageNum:1
+            }
+            ,request:{
+                pageName: 'pageNum' //页码的参数名称，默认：page
+                ,limitName: 'pageSize' //每页数据量的参数名，默认：limit
+            }
+            ,parseData: function(res){ //res 即为原始返回的数据
+                console.log(res)
+                couny=res.data.countNumber;
+                return {
+                    "code": res.code, //解析接口状态
+                    "msg": res.msg, //解析提示文本
+                    "count": res.data.countNumber, //解析数据长度
+                    "data": res.list, //解析数据列表
+                    'pageSize':res.pageSize,
+                    'pageNum':res.pageNum,
+                };
+            }
+            ,response: {
+                statusName: 'code' //规定数据状态的字段名称，默认：code
+                ,statusCode: 200 //规定成功的状态码，默认：0
+            }
+            ,cols: [[ //表头
+                {type: 'checkbox'}
+                ,{field: 'id', title: 'ID', width:100, sort: true,unresize:true}
+                ,{field: 'lsname', title: '流水名称', unresize:true}
+                ,{field: 'lstime', title: '流水时间', unresize:true}
+                ,{field: 'roletype', title: '权限类型', width:180,sort: true, unresize:true}
+                ,{field: 'rolejb', title: '权限级别', width:180,sort: true, unresize:true}
+                ,{field: 'date', title: '时间', width:180,sort: true, unresize:true}
+                ,{fixed: 'right', title: '操作',width:180, align:'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+
+            ]]
+
+        });
+
+        //监听行工具事件，表格编辑
+        table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+            var data = obj.data //获得当前行数据
+                ,layEvent = obj.event; //获得 lay-event 对应的值
+            if(layEvent === 'edit'){
+                var id=data.id;
+                var username=data.username;
+                var password=data.password;
+                var roletype=data.roletype;
+                var role=data.role;
+                var rolejb=data.rolejb;
+                var glname=data.glname;
+                var telphone=data.telphone;
+                var rolesId=data.rolesId;
+                var couna=2;//这个参数表示编辑
+                ad(id,username,password,couna,roletype,role,rolejb,glname,telphone,rolesId);
+                // console.log(data)
+
+            } else if(layEvent === 'del'){
+                layer.confirm('真的删除行么', function(index){
+                    var dataNumber=new Object();
+                    console.log(data);
+                    dataNumber.counts=1;
+                    var gf=new Array();
+                    gf.push(data.id);
+                    dataNumber.id=gf;
+                    console.log(dataNumber)
+                    poster('post','json','includs/zhanghaoguanli/Acounteditor',true,dataNumber,function (data) {
+                        console.log(data)
+                        var title=data.msg;
+                        if(data.code===200){
+                            cs("300px","50px",title,true,false)
+                            // obj.del(); //删除对应行（tr）的DOM结构
+                            setTimeout(function () {
+                                table.reload('demo', {
+                                    url: urls+'includs/zhanghaoguanli/Acountlist'
+                                    ,where: {
+                                        rolename:myform.rolename.value
+                                    } //设定异步数据接口的额外参数
+                                    ,page: {
+                                        curr: 1 //重新从第 1 页开始
+                                    }
+                                    //,height: 300
+                                });
+                                close();
+                            },20)
+                        }else{
+                            cs("300px","50px",title,true,false)
+                            setTimeout(function () {
+                                close();
+                            },1000)
+                        }
+                    })
+                    layer.close(index);
+                    //向服务端发送删除指令
+                });
+            }
+        });
+        function ad(id,username,password,couna,roletype,role,rolejb,glname,telphone,rolesId){
+            url = "yhglcreate.html?id="+id+"&usernames="+username+"&couna="+couna+"&passwords="+password+"&role="+role+"&roletype="+roletype+"&rolejb="+rolejb+"&glname="+glname+"&telphone="+telphone+"&rolesId="+rolesId;//此处拼接内容
+            window.location.href = url;
+        }
+        //搜索角色
+        form.on('submit(*)', function(){
+            table.reload('demo', {
+                url: urls+'includs/finanicalmanagement/lslist'
+                ,where: {
+                    lsname:myform.lsname.value
+                } //设定异步数据接口的额外参数
+                ,page: {
+                    curr: 1 //重新从第 1 页开始
+                }
+                //,height: 300
+            });
+            return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+        });
+
+        //删除按钮
+        $(document).on('click','.jsgl_sc',function(){
+            var checkStatus = table.checkStatus('demo'); //idTest 即为基础参数 id 对应的值
+            console.log(checkStatus.data)
+            if(checkStatus.data.length===0){
+                layer.open({
+                    title:'错误',
+                    type: 1,
+                    content: '<div style="width:100%;text-align: center;line-height: 40px;">您还未选择一行</div>',//这里content是一个普通的String
+                    area:['320px','140px'],
+                    btn: ['知道了'],
+                    btnAlign: 'c',//按钮居中显示
+                    time: 3000,
+                    resize:false,//不允许拉伸
+                    scrollbar:false,//不允许出现滚动条
+                    yes: function(index){
+                        layer.close(index); //如果设定了yes回调，需进行手工关闭
+                    },
+                });
+
+            }else{
+                var dataNumber=new Object();
+                dataNumber.counts=1;
+                var gf=new Array();
+                for(var i=0;i<checkStatus.data.length;i++){
+                    gf.push(checkStatus.data[i].id);
+                }
+                dataNumber.id=gf;
+                console.log(dataNumber)
+                //打开弹框确认删除
+                layer.open({
+                    title:'提示',
+                    type: 1,
+                    content: '<div style="width:100%;text-align: center;line-height: 40px;">您确定要删除此项</div>',//这里content是一个普通的String
+                    area:['320px','140px'],
+                    btn: ['确定','取消'],
+                    btnAlign: 'c',//按钮居中显示
+                    time: 3000,
+                    resize:false,//不允许拉伸
+                    scrollbar:false,//不允许出现滚动条
+                    yes: function(index){
+                        layer.close(index); //如果设定了yes回调，需进行手工关闭
+                        poster('post','json','includs/zhanghaoguanli/Acounteditor',true,dataNumber,function (data) {
+                            console.log(data)
+                            var title=data.msg;
+                            if(data.code===200){
+                                cs("300px","50px",title,true,false)
+                                setTimeout(function () {
+                                    table.reload('demo', {
+                                        url: urls+'includs/zhanghaoguanli/Acountlist'
+                                        ,where: {
+                                            rolename:myform.rolename.value
+                                        } //设定异步数据接口的额外参数
+                                        ,page: {
+                                            curr: 1 //重新从第 1 页开始
+                                        }
+                                        //,height: 300
+                                    });
+                                    close();
+                                },1000)
+                            }else{
+                                cs("300px","50px",title,true,false)
+                                setTimeout(function () {
+                                    close();
+                                },1000)
+                            }
+                        })
+                    }
+                    ,btn2: function(index){
+                        layer.close(index); //如果设定了yes回调，需进行手工关闭
+
+                    }
+                });
+
+            }
+        });
+
+
+
+    });
+
+</script>
+</body>
+</html>
